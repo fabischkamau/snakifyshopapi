@@ -18,6 +18,10 @@ app.register_blueprint(orders_blueprint)
 app.register_blueprint(reviews_blueprint)
 app.register_blueprint(transactions_blueprint)
 app.register_blueprint(users_blueprint)
+@app.route('/')
+def hello_world():
+    return 'Snakify Api'
+ 
 
 if __name__ == '__main__':
     app.run(debug=True)
